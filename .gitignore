@@ -1,0 +1,7 @@
+# OS Generated files #
+.DS_Store
+Thumbs.db
+
+# SCSS generated #
+.sass-cache
+.sass-cache/*
