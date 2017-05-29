@@ -3,6 +3,8 @@ $button-len: 150px;
 $font-stack: Dosis, sans-serif;
 //orange, might want to play around
 $site-color: #E47A43;
+$phone: "(min-width: 480px)";
+$desktop: "(min-width: 992px)";
 
 @mixin square($len) {
   width: $len;
@@ -32,7 +34,7 @@ $site-color: #E47A43;
   -ms-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
-  transform:  rotate(0deg);
+  transform: rotate(0deg);
 }
 
 @mixin menu-font($font, $weight, $size, $len) {
@@ -51,15 +53,26 @@ $site-color: #E47A43;
   transform: rotate(-45deg);
 }
 
-html, body {
+html, body{
   height: 100%;
+  overflow: hidden;
 }
 
 .icon {
-  font-size: 100px;
-  color: black;
+  font-size: 75px;
+  color: #111;
   &:hover {
     color: grey;
+  }
+}
+
+.social-icon {
+  font-size: 50px;
+  color: #111;
+  padding-right: 10px;
+  &:hover {
+    color: grey;
+    text-decoration: none;
   }
 }
 
@@ -69,14 +82,20 @@ html, body {
 }
 
 .contact {
-  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: hidden;
   text-align: center;
+  transition-duration: 500ms;
+  transform: translateY(100%);
 }
 
 .works {
   display: none;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   .column {
     height: 100vh;
   }
@@ -84,14 +103,27 @@ html, body {
 
 .cv {
   display: none;
+  overflow-y: auto;
+  .col-sm-7 p {
+    padding-left: 10px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .toggle {
   @include diamond($button-len);
-
+  transition-duration: 500ms;
+  
   a {
     @include square($button-len);
     @include menu-font($font-stack, 200, 35px, $button-len);
+    text-decoration: none;
     color: white;
     opacity: 0;
   }
@@ -125,44 +157,54 @@ html, body {
   left: -230px;
 }
 
-.top-triangle {
-  @include backToSquare();
+#left-text {
+  font-size: 150px;
+  text-decoration: none;
+}
+
+.email {
+  height: 40vh;
+}
+
+.envelope-top {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -80px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
   border-top: 45px solid black;
   border-right: 80px solid transparent;
   border-bottom: 50px solid transparent;
   border-left: 80px solid transparent;
 }
 
-.right-triangle {
-  @include backToSquare();
-  border-top: 50px solid transparent;
-  border-right: 50px solid black;
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid transparent;
-  transform: translate(-80px, -110px)
-}
-
-.down-triangle {
-  @include backToSquare();
+.envelope-bottom {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -85px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
   border-top: 50px solid transparent;
   border-right: 85px solid black;
   border-bottom: 50px solid black;
   border-left: 85px solid black;
-  transform: translateY(-225px)
 }
 
-.left-triangle {
-  @include backToSquare();
-  border-top: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid black;
-  transform: translate(80px, -110px)
+#return-down {
+  text-align: center;
 }
 
 #return-left {
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
 
@@ -177,5 +219,5 @@ html, body {
 #return-up {
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
 }

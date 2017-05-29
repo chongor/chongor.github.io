@@ -28,26 +28,18 @@ function hoverFade(element) {
 
 //transform menu into an email icon
 function mailOn() {
-  $("#up").addClass("top-triangle");
-  $("#right").addClass("right-triangle");
-  $("#down").addClass("down-triangle");
-  $("#left").addClass("left-triangle");
-  $(".menu").find('a').each(function(){
-    $(this).hide();
-  })
-  $(".contact").show();
+  $(".menu").css({"transform": "translateY(100%)"});
+  $(".menu").hide();
+  $(".contact").show(function(){
+    $(".contact").css({"transform": "translateY(0)"});
+  });
 }
 
 //transform email icon back into menu buttons
 function mailOff() {
-  $("#up").removeClass("top-triangle");
-  $("#right").removeClass("right-triangle");
-  $("#down").removeClass("down-triangle");
-  $("#left").removeClass("left-triangle");
-  $(".menu").find('a').each(function(){
-    $(this).show();
-  })
-  $(".contact").hide();
+  $(".contact").css({"transform": "translateY(100%)"});
+  $(".menu").show();
+  $(".menu").css({"transform": "translateY(0)"});
 }
 
 function projectOn() {
@@ -79,7 +71,7 @@ function setup() {
   hoverFade('#left-text');
   // setup the different page transitions
   $("#up").click(mailOn);
-  $("#return").click(mailOff);
+  $("#return-down").click(mailOff);
   $("#right").click(projectOn);
   $('#return-left').click(projectOff);
   $("#down").click(cvOn);
