@@ -19,6 +19,7 @@ console.log("hello")
 
 //transform menu into an email icon
 function mailOn() {
+  $(".contact").show();
   $(".menu").css({"transform": "translateY(-100%)"});
   $(".contact").css({"transform": "translateY(0)"});
 }
@@ -37,10 +38,11 @@ function projectOn() {
 }
 
 function projectOff() {
+  $(".contact").show();
+  $(window).scrollTop(0);
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
   $(".menu").css({"transform": "translateX(0)"});
-  $(".contact").show();
 }
 
 function cvOn() {
@@ -65,6 +67,7 @@ function setup() {
 }
 
 $(document).ready(function(){
+  console.log("Heyyy");
   $("body").show();
   setup();
 })
