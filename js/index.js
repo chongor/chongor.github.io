@@ -17,58 +17,44 @@
 
 console.log("hello")
 
-//show text on menu on hover
-function hoverFade(element) {
-  var speed = 300;
-  $(element).hover(
-    function(){ $(this).stop().fadeTo(speed, 1, "swing"); },
-    function(){ $(this).stop().fadeTo(speed, 0, "swing"); }
-  )
-}
-
 //transform menu into an email icon
 function mailOn() {
-  $(".menu").css({"transform": "translateY(100%)"});
-  $(".menu").hide();
-  $(".contact").show(function(){
-    $(".contact").css({"transform": "translateY(0)"});
-  });
+  $(".menu").css({"transform": "translateY(-100%)"});
+  $(".contact").css({"transform": "translateY(0)"});
 }
 
 //transform email icon back into menu buttons
 function mailOff() {
   $(".contact").css({"transform": "translateY(100%)"});
-  $(".menu").show();
   $(".menu").css({"transform": "translateY(0)"});
 }
 
 function projectOn() {
-  $(".menu").hide();
-  $(".works").show();
+  $(".menu").css({"transform": "translateX(-100%)"});
+  $("body").css({"overflow-y": "visible"});
+  $(".work").css({"transform": "translateX(0)"});
+  $(".contact").hide();
 }
 
 function projectOff() {
-  $(".works").hide();
-  $(".menu").show();
+  $(".work").css({"transform": "translateX(100%)"});
+  $("body").css({"overflow-y": "hidden"});
+  $(".menu").css({"transform": "translateX(0)"});
+  $(".contact").show();
 }
 
 function cvOn() {
-  $(".menu").hide();
-  $(".cv").show();
+  $(".menu").css({"transform": "translateY(100%)"});
+  $(".cv").css({"transform": "translateY(0)"});
 }
 
 function cvOff() {
-  $(".cv").hide();
-  $(".menu").show();
+  $(".cv").css({"transform": "translateY(-100%)"});
+  $(".menu").css({"transform": "translateY(0)"});
 }
 
 //setup all the handlers
 function setup() {
-  // setup the text to fade in and out
-  hoverFade('#up-text');
-  hoverFade('#right-text');
-  hoverFade('#down-text');
-  hoverFade('#left-text');
   // setup the different page transitions
   $("#up").click(mailOn);
   $("#return-down").click(mailOff);
@@ -79,5 +65,6 @@ function setup() {
 }
 
 $(document).ready(function(){
+  $("body").show();
   setup();
 })

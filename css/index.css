@@ -1,10 +1,19 @@
-html, body {
+html {
+  height: 100%; }
+
+body {
   height: 100%;
+  display: none;
   overflow: hidden; }
 
 .icon {
-  font-size: 75px;
   color: #111; }
+  @media screen and (min-width: 480px) {
+    .icon {
+      font-size: 75px; } }
+  @media screen and (max-width: 480px) {
+    .icon {
+      font-size: 45px; } }
   .icon:hover {
     color: grey; }
 
@@ -17,31 +26,76 @@ html, body {
     text-decoration: none; }
 
 .menu {
-  width: 100vw;
-  height: 100vh; }
-
-.contact {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  display: hidden;
-  text-align: center;
-  transition-duration: 500ms;
-  transform: translateY(100%); }
+  transition-duration: 500ms; }
 
-.works {
-  display: none;
+.contact {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto; }
-  .works .column {
-    height: 100vh; }
+  text-align: center;
+  transition-duration: 500ms;
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  -o-transfrom: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transfrom-style: preserve-3d; }
+
+.work {
+  position: absolute;
+  top: 0;
+  overflow-y: visible;
+  transition-duration: 500ms;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transfrom: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transfrom-style: preserve-3d;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
+  .work .column {
+    height: 100%; }
+  .work .work-row {
+    padding-top: 5%; }
+    .work .work-row #first {
+      padding-top: 10px; }
+  .work h2 {
+    text-align: center;
+    padding-top: 10px; }
+  .work h3 {
+    display: inline; }
+  .work h4 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: inline;
+    float: right; }
 
 .cv {
-  display: none;
-  overflow-y: auto; }
-  .cv .col-sm-7 p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  transition-duration: 500ms;
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transfrom: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  -webkit-transfrom-style: preserve-3d;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
+  .cv .col-sm-8 p {
     padding-left: 10px; }
+  .cv .cv-me {
+    text-align: center; }
 
 .footer {
   position: absolute;
@@ -81,7 +135,13 @@ html, body {
     transform: rotate(-45deg);
     text-decoration: none;
     color: white;
-    opacity: 0; }
+    opacity: 0;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s; }
+    .toggle a:hover {
+      opacity: 1; }
 
 #up {
   top: -230px;
@@ -108,8 +168,7 @@ html, body {
   left: -230px; }
 
 #left-text {
-  font-size: 150px;
-  text-decoration: none; }
+  font-size: 150px; }
 
 .email {
   height: 40vh; }
@@ -119,11 +178,6 @@ html, body {
   top: 20%;
   left: 50%;
   margin-left: -80px;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
   border-top: 45px solid black;
   border-right: 80px solid transparent;
   border-bottom: 50px solid transparent;
@@ -134,11 +188,6 @@ html, body {
   top: 20%;
   left: 50%;
   margin-left: -85px;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
   border-top: 50px solid transparent;
   border-right: 85px solid black;
   border-bottom: 50px solid black;
@@ -148,15 +197,8 @@ html, body {
   text-align: center; }
 
 #return-left {
-  position: relative;
-  top: 40%;
-  transform: translateY(-50%); }
-
-.work-row {
-  padding-top: 50px; }
-
-.single-project {
-  width: 32%; }
+  position: fixed;
+  top: 40%; }
 
 #return-up {
   text-align: center;

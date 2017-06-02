@@ -23,20 +23,21 @@ html
       label.toggle#up
         a#up-text Contact
       label.toggle#right
-        a#right-text Works
+        a#right-text Work
       label.toggle#down
         a#down-text CV
       label.toggle#left
         a.icon-dy#left-text
     
     div.contact
-      div.email
-        label.envelope-top
-        label.envelope-bottom
-      div.container-fluid
+      div.container
         div.row
-          div.col-md-3
-          div.col-md-6
+          div.col-md-12.email
+            label.envelope-top
+            label.envelope-bottom
+        div.row
+          div.col-md-3.col-xs-2
+          div.col-md-6.col-xs-8
             h2 Contact Me
             form(action="mailto:darren@darreny.com", method="post", enctype="text/plain")
               div.form-group
@@ -44,54 +45,79 @@ html
               div.form-group
                 input.form-control(type="text", name="email", placeholder="Your Email")
               div.form-group
-                textarea.form-control(rows="4", name="message", placeholder="Your Message")
-          div.col-md-3
+                textarea.form-control(rows="4", name="message", placeholder="Your Message", required)
+            button.btn.btn-primary Send
+          div.col-md-3.col-xs-2
       div.footer
         i.icon.icon-diamond-down-arrow#return-down
       
-    div.works
+    div.work
       div.container-fluid
         div.row
-          div.column.col-md-1
+          div.column.col-xs-2
             i.icon.icon-diamond-left-arrow#return-left
-          div.column.col-md-10
-            div.row.work-row
-              div.col-md-4
-                p project 1
-              div.col-md-4
-                p project 2
-              div.col-md-4
-                p project 3
-          div.column.col-md-1
+          div.column.col-xs-8
+            h2 Latest Work
+            div.row.work-row(name="recommendor")
+              h3 #[strong Subreddit Recommendor]
+              h4 Spring 2017
+              p#first Term Project for 18-645 How To Write Fast Code. A foray into creating a faster and scalable Reddit subreddit recommendation engine using distributed computing with Hadoop and Amazon Elastic MapReduce on Amazon Web Services. Project repo:  
+                a(href="https://github.com/chongor/18645_team030_project") here
+                | .
+              p We preprocessed roughly 53 million raw Reddit comments from January 2015 (found 
+                a(href="https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/") here
+                | ). A user's preference for a particular subreddit was denoted by an affinity score, the number of comments made in the subreddit over the total number of comments posted in that subreddit.
+              p The recommendation engine utilized the K Nearest Neighbor algorithm, a collaborative filtering technique, to find the best recommended subreddit based on users similar in preference.
+              p After preprocessing, we trained the recommendation model using Hadoop on AWS EMR.  This involved two MapReduce jobs.  The first job calculated the partial distances between each user for each subreddit.  The second job took the output from the first and calculated the Euclidian distance between each user using the partial distances.
+              p The output from the MapReduce program was inserted into a MongoDB database from which the recommendation python program would use to calculate the k nearest neighbors.  Given a user that exists within the database, the program find the list of subreddits for each of the k nearest neihbors, and sums their affinity scores for each subreddit.  The subreddit with the highest affinity score sum that the user is not subscribed to is recommended as output.
+            div.row.work-row(name="ar-nav")
+              h3 #[strong POWerNAV - AR Navigation]
+              h4 Fall 2016 - Spring 2017
+              p#first Created by a team of 3 for our Undergraduate Senior Design Project. We created a augmented reality navigation app on the Epson Moverio BT-200 smart glasses running on Android OS.
+              p Using OpenGL we created a digital model of the campus, mainly buildings and roads, with text labels overlaid.  A navigation subprogram calculates the shortest path along existing roads to a destination. Directions are provided onscreen through the use of a colored path with arrows directing the user.
+              p A demo of a school tour was created to demonstrated the usage of POWerNAV. Video demo of the app in action: 
+                a(href="https://youtu.be/CuqLEfhLUw4") here
+                | . We were one of the runner-ups for the senior design projects from the Computer Science department.
+              p Hardware limitations make it difficult to prevent the digital model world from desyncing with the real world causing a break in immersion in the AR experience. However, apps such as ours has shown its potential use in indoor environments to give tours, such as in museums, where targets could be placed at strategic positions to resync the digitla world to the real.
+            div.row.work-row(name="study-buddy")
+              h3 #[strong Study Buddy]
+              h4 Fall 2014
+              p#first Created by a team of 4 for a PennApps, Upenn's semesterly Hackathon. A productivity chrome app crossed with a simple pet simulator.  Stay focused on work, or else!
+            div.row.work-row(name="blackout")
+              h3 #[strong Black Out]
+              h4 Spring 2014
+              p#first Created by a team of 4 for a Game Jam on Unity3D.  Navigate three levels using echolocation, like a bat!
+          div.column.col-xs-2
         
     div.cv
       div.container-fluid
         div.row
-          div.col-md-1
-          div.col-md-10#return-up
+          div.col-xs-1
+          div.col-xs-10#return-up
             i.icon.icon-diamond-up-arrow
-          div.col-md-1
+          div.col-xs-1
         div.row
-          div.col-sm-1
-          div.col-sm-10
-            div.col-sm-3
+          div.col-xs-1
+          div.col-xs-10
+            div.col-sm-4.cv-me
               h2 Darren Yin
               p #[strong Software Engineer]
               a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/")
               a.social-icon.icon-github(href="https://github.com/chongor")
-            div.col-sm-7
+            div.col-sm-8
               h3 Nice ta meetcha!
               p I'm a California native who writes code and dabbles in digital design.
               h3 Education
               p M.S.E. in Software Engineering - Carnegie Mellon University, 2017
               p B.S.E. in Computer Science - University of Pennsylvania, 2016
               h3 Work Experience
-              p #[strong Wayfair] - Software Engineering Intern, 2015
-              p #[strong TutorIT Web] - Software Engineering Intern, 2014
-              p #[strong Hearhere] - Web Developer, 2013-2014
+              p #[strong Wayfair - Software Engineering Intern, 2015]
+              p I DID STUFF
+              p #[strong TutorIT Web - Software Engineering Intern, 2014]
+              p #[strong Hearhere - Web Developer, 2013-2014]
               h3 Skills
               p Python
               p Java
               p Javascript
               p C/C++
-          div.col-md-1
+          div.col-xs-1
