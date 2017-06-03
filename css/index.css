@@ -47,7 +47,6 @@ body {
   -webkit-transfrom-style: preserve-3d; }
 
 .work {
-  position: absolute;
   top: 0;
   display: hidden;
   overflow-y: visible;
@@ -62,7 +61,7 @@ body {
   -moz-animation-delay: 2s;
   animation-delay: 2s; }
   .work .column {
-    height: 100%; }
+    height: 100vh; }
   .work .work-row {
     padding-top: 5%; }
   .work h2 {
@@ -202,7 +201,7 @@ body {
 
 #return-left {
   position: fixed;
-  top: 30%; }
+  top: 45vh; }
 
 #return-up {
   text-align: center;

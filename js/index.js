@@ -55,6 +55,16 @@ function cvOff() {
   $(".menu").css({"transform": "translateY(0)"});
 }
 
+function cvButton() {
+  var btn = $("#return-left");
+  var top = btn.offset().top;
+
+  $(window).on('scroll', function(e){
+    var scrollTop = $(window).scrollTop();
+    btn.css("top", scrollTop + top);
+  });
+}
+
 //setup all the handlers
 function setup() {
   // setup the different page transitions
@@ -69,5 +79,6 @@ function setup() {
 $(document).ready(function(){
   console.log("Heyyy");
   $("body").show();
+  cvButton();
   setup();
 })
