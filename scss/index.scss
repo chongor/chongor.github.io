@@ -1,18 +1,31 @@
 
-$button-len: 150px;
+$menu-len: 150px;
+$menu-len-min: 100px;
+$pos: 230px;
+$pos-min: 160px;
 $font-stack: Dosis, sans-serif;
+$font-weight: 200;
+$font-size: 35px;
+$font-size-min: 25px;
 //orange, might want to play around
 $site-color: #E47A43;
-$phone: "(min-width: 480px)";
-$desktop: "(min-width: 992px)";
+$phone: "(max-width: 480px)";
+$desktop: "(min-width: 480px)";
 
-@mixin square($len) {
-  width: $len;
-  height: $len;
+@mixin square($len, $min-len) {
+  @media screen and #{$desktop} {
+    width: $len;
+    height: $len;
+  }
+
+  @media screen and #{$phone} {
+    width: $min-len;
+    height: $min-len;
+  }
 }
 
-@mixin diamond($len) {
-  @include square($len);
+@mixin diamond($len, $min-len) {
+  @include square($len, $min-len);
   margin: auto;
   display: block;
   position: fixed;
@@ -32,15 +45,26 @@ $desktop: "(min-width: 992px)";
   transform: rotate(0deg);
 }
 
-@mixin menu-font($font, $weight, $size, $len) {
+@mixin menu-font($font, $len, $len-min) {
+  @media screen and #{$desktop} {
+    width: $len;
+    height: $len;
+    font-size: $font-size;
+    line-height: $len;
+  }
+
+  @media screen and #{$phone} {
+    width: $len-min;
+    height: $len-min;
+    font-size: $font-size-min;
+    line-height: $len-min;
+  }
   margin: auto;
   display: block;
   position: absolute;
   font-family: $font;
-  font-weight: $weight;
-  font-size: $size;
+  font-weight: $font-weight;
   text-align: center;
-  line-height: $len;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -59,11 +83,11 @@ body {
 }
 
 .icon {
-  @media screen and (min-width: 480px) {
+  @media screen and #{$desktop} {
     font-size: 75px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and #{$phone} {
     font-size: 45px;
   }
   color: #111;
@@ -83,7 +107,7 @@ body {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   transition-duration: 500ms;
@@ -97,11 +121,11 @@ body {
   display: hidden;
   text-align: center;
   transition-duration: 500ms;
-  -webkit-transform: translate3d(0, 150%, 0);
-  -moz-transform: translate3d(0, 150%, 0);
-  -ms-transform: translate3d(0, 150%, 0);
-  -o-transfrom: translate3d(0, 150%, 0);
-  transform: translate3d(0, 150%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  -o-transfrom: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
   -webkit-transfrom-style: preserve-3d;
 }
 
@@ -158,8 +182,9 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  //display: hidden;
+  display: hidden;
   overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   transition-duration: 500ms;
   -webkit-transform: translate3d(0, -100%, 0);
@@ -182,19 +207,20 @@ body {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   text-align: center;
   width: 100%;
+  background-color: white;
 }
 
 .toggle {
-  @include diamond($button-len);
+  @include diamond($menu-len, $menu-len-min);
   transition-duration: 500ms;
 
   a {
-    @include square($button-len);
-    @include menu-font($font-stack, 200, 35px, $button-len);
+    @include square($menu-len-min, $menu-len-min);
+    @include menu-font($font-stack, $menu-len, $menu-len-min);
     text-decoration: none;
     color: white;
     opacity: 0;
@@ -210,61 +236,113 @@ body {
 }
 
 #up {
-  top: -230px;
+  @media screen and #{$desktop} {
+    top: -$pos;
+  }
+
+  @media screen and #{$phone} {
+    top: -$pos-min;
+  }
+
   right: 0;
   bottom: 0;
   left: 0;
 }
 
 #right {
+  @media screen and #{$desktop} {
+    right: -$pos;
+  }
+
+  @media screen and #{$phone} {
+    right: -$pos-min;
+  }
   top: 0;
-  right: -230px;
   bottom: 0;
   left: 0;
 }
 
 #down {
+  @media screen and #{$desktop} {
+    bottom: -$pos;
+  }
+
+  @media screen and #{$phone} {
+    bottom: -$pos-min;
+  }
   top: 0;
   right: 0;
-  bottom: -230px;
   left: 0;
 }
 
 #left {
+  @media screen and #{$desktop} {
+    left: -$pos;
+  }
+
+  @media screen and #{$phone} {
+    left: -$pos-min;
+  }
   top: 0;
   right: 0;
   bottom: 0;
-  left: -230px;
 }
 
 #left-text {
-  font-size: 150px;
+  @media screen and #{$desktop} {
+    font-size: 150px;
+  }
+
+  @media screen and #{$phone} {
+    font-size: 100px;
+  }
 }
 
 .email {
-  height: 40vh;
+  height: 25vh;
 }
 
 .envelope-top {
+  @media screen and #{$desktop} {
+    margin-left: -80px;
+    border-top: 45px solid black;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 80px solid transparent;
+  }
+
+  @media screen and #{$phone} {
+    margin-left: -60px;
+    border-top: 30px solid black;
+    border-right: 60px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 60px solid transparent;
+  }
   position: absolute;
   top: 20%;
   left: 50%;
-  margin-left: -80px;
-  border-top: 45px solid black;
-  border-right: 80px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 80px solid transparent;
+
 }
 
 .envelope-bottom {
+  @media screen and #{$desktop} {
+    margin-left: -85px;
+    border-top: 50px solid transparent;
+    border-right: 85px solid black;
+    border-bottom: 50px solid black;
+    border-left: 85px solid black;
+  }
+
+  @media screen and #{$phone} {
+    margin-left: -65px;
+    border-top: 35px solid transparent;
+    border-right: 65px solid black;
+    border-bottom: 35px solid black;
+    border-left: 65px solid black;
+  }
   position: absolute;
   top: 20%;
   left: 50%;
-  margin-left: -85px;
-  border-top: 50px solid transparent;
-  border-right: 85px solid black;
-  border-bottom: 50px solid black;
-  border-left: 85px solid black;
 }
 
 #return-down {
@@ -274,12 +352,16 @@ body {
 #return-left {
   position: fixed;
   top: 45vh;
+  @media screen and #{$phone} {
+    left: 2px;
+  }
 }
 
 #return-up {
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 5vh;
+  padding-bottom: 10px;
+  height: 10vh;
 }
 
 .button {
