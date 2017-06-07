@@ -228,11 +228,11 @@ body {
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
-
-    &:hover {
-      opacity: 1;
-    }
   }
+}
+
+.hover:hover {
+  opacity: 1;
 }
 
 #up {
