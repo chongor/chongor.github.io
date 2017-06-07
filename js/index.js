@@ -7,15 +7,16 @@ function mailOn() {
 
 //transform email icon back into menu buttons
 function mailOff() {
+  $(".contact").hide();
   $(".contact").css({"transform": "translateY(100%)"});
   $(".menu").css({"transform": "translateY(0)"});
 }
 
 function projectOn() {
+  $(".contact").hide();
   $(".menu").css({"transform": "translateX(-100%)"});
   $("body").css({"overflow-y": "visible"});
   $(".work").css({"transform": "translateX(0)"});
-  $(".contact").hide();
 }
 
 function projectOff() {
@@ -27,11 +28,13 @@ function projectOff() {
 }
 
 function cvOn() {
+  $(".contact").hide();
   $(".menu").css({"transform": "translateY(100%)"});
   $(".cv").css({"transform": "translateY(0)"});
 }
 
 function cvOff() {
+  $(".contact").show();
   $(".cv").css({"transform": "translateY(-100%)"});
   $(".menu").css({"transform": "translateY(0)"});
 }
@@ -43,6 +46,15 @@ function cvButton() {
   $(window).on('scroll', function(e){
     var scrollTop = $(window).scrollTop();
     btn.css("top", scrollTop + top);
+  });
+}
+
+function mobileSetup() {
+  $(document).bind('touchstart', function(e){
+    e.preventDefault();
+  });
+  $(document).bind('touchmove', function(e){
+    e.preventDefault();
   });
 }
 
