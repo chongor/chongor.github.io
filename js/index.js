@@ -46,12 +46,14 @@ function cvOff() {
   $(".menu").css({"transform": "translateY(0)"});
 }
 
-function cvButton() {
+function workButton() {
   var btn = $("#return-left");
-  var top = btn.offset().top;
 
   $(window).on('scroll', function(e){
+    var top = $(window).height() * .45;
     var scrollTop = $(window).scrollTop();
+    console.log(scrollTop);
+
     btn.css("top", scrollTop + top);
   });
 }
@@ -68,7 +70,7 @@ function setup() {
 }
 
 $(document).ready(function(){
-  cvButton();
+  workButton();
   setup();
   $("body").show();
   //have logo fade in
