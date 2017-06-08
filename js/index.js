@@ -74,5 +74,6 @@ $(document).ready(function(){
   $("body").show();
   cvButton();
   $("#left-text").fadeTo(1000, 1);
+  mobileSetup();
   setup();
 })
