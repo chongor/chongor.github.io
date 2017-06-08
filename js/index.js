@@ -1,3 +1,8 @@
+
+function hideContact() {
+  $(".contact").hide();
+}
+
 //transform menu into an email icon
 function mailOn() {
   $(".contact").show();
@@ -10,11 +15,12 @@ function mailOn() {
 function mailOff() {
   $(".contact").css({"transform": "translateY(100%)"});
   $(".menu").css({"transform": "translateY(0)"});
+  setTimeout(hideContact, 1500);
 }
 
 function projectOn() {
+  hideContact();
   $(".work").show();
-  $(".contact").hide();
   $(".menu").css({"transform": "translateX(-100%)"});
   $("body").css({"overflow-y": "visible"});
   $(".work").css({"transform": "translateX(0)"});
@@ -28,7 +34,7 @@ function projectOff() {
 }
 
 function cvOn() {
-  $(".contact").hide();
+  hideContact();
   $(".work").hide();
   $(".menu").css({"transform": "translateY(100%)"});
   $(".cv").css({"transform": "translateY(0)"});
