@@ -2,7 +2,6 @@
 function hideContact() {
   $(".contact").hide();
 }
-
 //transform menu into an email icon
 function mailOn() {
   $(".contact").show();
@@ -20,6 +19,7 @@ function mailOff() {
 
 function projectOn() {
   hideContact();
+  $(".cv").hide();
   $(".work").show();
   $(".menu").css({"transform": "translateX(-100%)"});
   $("body").css({"overflow-y": "visible"});
@@ -27,6 +27,7 @@ function projectOn() {
 }
 
 function projectOff() {
+  $(".cv").show();
   $(window).scrollTop(0);
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
