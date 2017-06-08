@@ -1,39 +1,55 @@
 
-//transform menu into an email icon
-function mailOn() {
-  $(".contact").show();
-  $(".work").hide();
+//true => hide, false => show
+function hideSection(class_name, bool) {
+  if(bool) {
+    $(class_name).hide();
+  } else {
+    $(class_name).show();
+  }
+}
+
+function hideContact() {
+  hideSection(".contact", true)
+}
+
+function hideWork() {
+  hideSection(".work", true)
+}
+
+function contactOn() {
+  hideSection(".contact", false);
+  hideSection(".work", true);
   $(".menu").css({"transform": "translateY(-100%)"});
   $(".contact").css({"transform": "translateY(0)"});
 }
 
-//transform email icon back into menu buttons
-function mailOff() {
+function contactOff() {
   $(".contact").css({"transform": "translateY(100%)"});
   $(".menu").css({"transform": "translateY(0)"});
   setTimeout(hideContact, 1500);
 }
 
-function projectOn() {
-  $(".contact").hide();
-  $(".cv").hide();
-  $(".work").show();
+function workOn() {
+  hideSection(".contact", true);
+  hideSection(".cv", true);
+  hideSection(".work", false);
   $(".menu").css({"transform": "translateX(-100%)"});
   $("body").css({"overflow-y": "visible"});
   $(".work").css({"transform": "translateX(0)"});
 }
 
-function projectOff() {
+function workOff() {
   $(window).scrollTop(0);
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
   $(".menu").css({"transform": "translateX(0)"});
+  setTimeout(hideWork, 1500);
 }
 
 function cvOn() {
-  $(".cv").show();
-  $(".contact").hide();
-  $(".work").hide();
+  hideSection(".cv", false);
+  hideSection(".contact", true);
+  hideSection(".work", true);
   $(".menu").css({"transform": "translateY(100%)"});
   $(".cv").css({"transform": "translateY(0)"});
 }
@@ -59,16 +75,15 @@ function workButton() {
 //setup all the handlers
 function setup() {
   // setup the different page transitions
-  $("#up").click(mailOn);
-  $("#return-down").click(mailOff);
-  $("#right").click(projectOn);
-  $('#return-left').click(projectOff);
+  $("#up").click(contactOn);
+  $("#return-down").click(contactOff);
+  $("#right").click(workOn);
+  $('#return-left').click(workOff);
   $("#down").click(cvOn);
   $('#return-up').children().click(cvOff);
   //hide up and down
-  $(".contact").hide();
-  $(".cv").hide();
-
+  hideSection(".contact", true);
+  hideSection(".cv", true);
 }
 
 $(document).ready(function(){
