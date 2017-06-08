@@ -71,9 +71,11 @@ body {
     display: inline; }
   .work h4 {
     margin-top: 5px;
-    margin-bottom: 0;
-    display: inline;
-    float: right; }
+    margin-bottom: 0; }
+    @media screen and (min-width: 480px) {
+      .work h4 {
+        display: inline;
+        float: right; } }
 
 #first {
   padding-top: 10px; }

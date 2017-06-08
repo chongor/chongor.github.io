@@ -165,8 +165,10 @@ body {
   h4 {
     margin-top: 5px;
     margin-bottom: 0;
-    display: inline;
-    float: right;
+    @media screen and #{$desktop} {
+      display: inline;
+      float: right;
+    }
   }
 }
 

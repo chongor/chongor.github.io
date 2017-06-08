@@ -7,8 +7,9 @@ function mailOn() {
 
 //transform email icon back into menu buttons
 function mailOff() {
-  $(".contact").hide();
-  $(".contact").css({"transform": "translateY(100%)"});
+  $(".contact").css({"transform": "translateY(100%)"}, function(){
+    $(".contact").hide();
+  });
   $(".menu").css({"transform": "translateY(0)"});
 }
 
