@@ -1,30 +1,36 @@
 
-//true => hide, false => show
-function hideSection(class_name, bool) {
-  if(bool) {
-    $(class_name).hide();
-  } else {
-    $(class_name).show();
-  }
+function hideContact() {
+  $(".contact").hide();
 }
 
-function hideContact() {
-  hideSection(".contact", true);
+function showContact() {
+  $(".contact").show();
 }
 
 function hideWork() {
-  hideSection(".work", true);
+  $(".work").hide();
+}
+
+function showWork() {
+  $(".work").show();
 }
 
 function hideCv() {
-  hideSection(".cv", true);
+  $(".cv").hide();
+}
+
+function showCv() {
+  $(".cv").show();
 }
 
 function contactOn() {
-  hideSection(".contact", false);
-  hideSection(".work", true);
-  $(".menu").css({"transform": "translateY(-100%)"});
-  $(".contact").css({"transform": "translateY(0)"});
+  hideContact();
+  hideWork();
+  setTimeout(function(){
+    showContact();
+    $(".menu").css({"transform": "translateY(-100%)"});
+    $(".contact").css({"transform": "translateY(0)"});
+  }, 200);
 }
 
 function contactOff() {
@@ -34,12 +40,14 @@ function contactOff() {
 }
 
 function workOn() {
-  hideSection(".contact", true);
-  hideSection(".cv", true);
-  hideSection(".work", false);
-  $(".menu").css({"transform": "translateX(-100%)"});
-  $("body").css({"overflow-y": "visible"});
-  $(".work").css({"transform": "translateX(0)"});
+  hideContact();
+  hideCv();
+  setTimeout(function() {
+    showWork();
+    $(".menu").css({"transform": "translateX(-100%)"});
+    $("body").css({"overflow-y": "visible"});
+    $(".work").css({"transform": "translateX(0)"});
+  }, 200);
 }
 
 function workOff() {
@@ -51,11 +59,13 @@ function workOff() {
 }
 
 function cvOn() {
-  hideSection(".cv", false);
-  hideSection(".contact", true);
-  hideSection(".work", true);
-  $(".menu").css({"transform": "translateY(100%)"});
-  $(".cv").css({"transform": "translateY(0)"});
+  hideContact();
+  hideWork();
+  setTimeout(function() {
+    showCv();
+    $(".menu").css({"transform": "translateY(100%)"});
+    $(".cv").css({"transform": "translateY(0)"});
+  }, 200);
 }
 
 function cvOff() {
@@ -87,9 +97,9 @@ function setup() {
   $("#down").click(cvOn);
   $('#return-up').children().click(cvOff);
   //hide up and down
-  hideSection(".contact", true);
-  hideSection(".cv", true);
-  hideSection(".work", true);
+  hideContact();
+  hideCv();
+  hideWork();
 }
 
 $(document).ready(function(){
