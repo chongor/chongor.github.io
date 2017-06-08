@@ -1,7 +1,4 @@
 
-function hideContact() {
-  $(".contact").hide();
-}
 //transform menu into an email icon
 function mailOn() {
   $(".contact").show();
@@ -18,7 +15,7 @@ function mailOff() {
 }
 
 function projectOn() {
-  hideContact();
+  $(".contact").hide();
   $(".cv").hide();
   $(".work").show();
   $(".menu").css({"transform": "translateX(-100%)"});
@@ -27,7 +24,6 @@ function projectOn() {
 }
 
 function projectOff() {
-  $(".cv").show();
   $(window).scrollTop(0);
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
@@ -35,7 +31,8 @@ function projectOff() {
 }
 
 function cvOn() {
-  hideContact();
+  $(".cv").show();
+  $(".contact").hide();
   $(".work").hide();
   $(".menu").css({"transform": "translateY(100%)"});
   $(".cv").css({"transform": "translateY(0)"});
@@ -68,6 +65,10 @@ function setup() {
   $('#return-left').click(projectOff);
   $("#down").click(cvOn);
   $('#return-up').children().click(cvOff);
+  //hide up and down
+  $(".contact").hide();
+  $(".cv").hide();
+
 }
 
 $(document).ready(function(){
