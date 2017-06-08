@@ -1,19 +1,19 @@
 //transform menu into an email icon
 function mailOn() {
   $(".contact").show();
+  $(".work").hide();
   $(".menu").css({"transform": "translateY(-100%)"});
   $(".contact").css({"transform": "translateY(0)"});
 }
 
 //transform email icon back into menu buttons
 function mailOff() {
-  $(".contact").css({"transform": "translateY(100%)"}, function(){
-    $(".contact").hide();
-  });
+  $(".contact").css({"transform": "translateY(100%)"});
   $(".menu").css({"transform": "translateY(0)"});
 }
 
 function projectOn() {
+  $(".work").show();
   $(".contact").hide();
   $(".menu").css({"transform": "translateX(-100%)"});
   $("body").css({"overflow-y": "visible"});
@@ -30,12 +30,14 @@ function projectOff() {
 
 function cvOn() {
   $(".contact").hide();
+  $(".work").hide();
   $(".menu").css({"transform": "translateY(100%)"});
   $(".cv").css({"transform": "translateY(0)"});
 }
 
 function cvOff() {
   $(".contact").show();
+  $(".menu").css({"display": "block"});
   $(".cv").css({"transform": "translateY(-100%)"});
   $(".menu").css({"transform": "translateY(0)"});
 }
@@ -51,9 +53,6 @@ function cvButton() {
 }
 
 function mobileSetup() {
-  $(document).bind('touchstart', function(e){
-    e.preventDefault();
-  });
   $(document).bind('touchmove', function(e){
     e.preventDefault();
   });
@@ -74,6 +73,6 @@ $(document).ready(function(){
   $("body").show();
   cvButton();
   $("#left-text").fadeTo(1000, 1);
-  mobileSetup();
+  //mobileSetup();
   setup();
 })
