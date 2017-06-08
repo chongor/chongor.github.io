@@ -84,6 +84,7 @@ function setup() {
   //hide up and down
   hideSection(".contact", true);
   hideSection(".cv", true);
+  hideSection(".work", true);
 }
 
 $(document).ready(function(){
