@@ -56,12 +56,6 @@ function cvButton() {
   });
 }
 
-function mobileSetup() {
-  $(document).bind('touchmove', function(e){
-    e.preventDefault();
-  });
-}
-
 //setup all the handlers
 function setup() {
   // setup the different page transitions
@@ -75,7 +69,6 @@ function setup() {
 
 $(document).ready(function(){
   cvButton();
-  mobileSetup();
   setup();
   $("body").show();
   //have logo fade in
