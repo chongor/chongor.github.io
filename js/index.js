@@ -21,7 +21,6 @@ function projectOn() {
 }
 
 function projectOff() {
-  $(".contact").show();
   $(window).scrollTop(0);
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
@@ -36,7 +35,6 @@ function cvOn() {
 }
 
 function cvOff() {
-  $(".contact").show();
   $(".menu").css({"display": "block"});
   $(".cv").css({"transform": "translateY(-100%)"});
   $(".menu").css({"transform": "translateY(0)"});
@@ -70,9 +68,10 @@ function setup() {
 }
 
 $(document).ready(function(){
-  $("body").show();
   cvButton();
-  $("#left-text").fadeTo(1000, 1);
-  //mobileSetup();
+  mobileSetup();
   setup();
+  $("body").show();
+  //have logo fade in
+  $("#left-text").fadeTo(1000, 1);
 })
