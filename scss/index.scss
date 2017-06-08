@@ -217,7 +217,7 @@ body {
 
 .toggle {
   @include diamond($menu-len, $menu-len-min);
-  transition-duration: 500ms;
+  transition-duration: 400ms;
 
   a {
     @include square($menu-len-min, $menu-len-min);

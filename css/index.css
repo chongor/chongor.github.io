@@ -121,7 +121,7 @@ body {
   -o-transition: all 0.25s;
   transition: all 0.25s;
   transform: rotate(45deg);
-  transition-duration: 500ms; }
+  transition-duration: 400ms; }
   @media screen and (min-width: 480px) {
     .toggle {
       width: 150px;

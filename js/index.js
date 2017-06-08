@@ -30,7 +30,7 @@ function contactOn() {
 function contactOff() {
   $(".contact").css({"transform": "translateY(100%)"});
   $(".menu").css({"transform": "translateY(0)"});
-  setTimeout(hideContact, 1500);
+  setTimeout(hideContact, 200);
 }
 
 function workOn() {
@@ -47,7 +47,7 @@ function workOff() {
   $(".work").css({"transform": "translateX(100%)"});
   $("body").css({"overflow-y": "hidden"});
   $(".menu").css({"transform": "translateX(0)"});
-  setTimeout(hideWork, 1500);
+  setTimeout(hideWork, 200);
 }
 
 function cvOn() {
@@ -62,7 +62,7 @@ function cvOff() {
   $(".menu").css({"display": "block"});
   $(".cv").css({"transform": "translateY(-100%)"});
   $(".menu").css({"transform": "translateY(0)"});
-  setTimeout(hideCv, 1500);
+  setTimeout(hideCv, 200);
 }
 
 function workButton() {
