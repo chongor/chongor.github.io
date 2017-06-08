@@ -9,11 +9,15 @@ function hideSection(class_name, bool) {
 }
 
 function hideContact() {
-  hideSection(".contact", true)
+  hideSection(".contact", true);
 }
 
 function hideWork() {
-  hideSection(".work", true)
+  hideSection(".work", true);
+}
+
+function hideCv() {
+  hideSection(".cv", true);
 }
 
 function contactOn() {
@@ -58,6 +62,7 @@ function cvOff() {
   $(".menu").css({"display": "block"});
   $(".cv").css({"transform": "translateY(-100%)"});
   $(".menu").css({"transform": "translateY(0)"});
+  setTimeout(hideCv, 1500);
 }
 
 function workButton() {
