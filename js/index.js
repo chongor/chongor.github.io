@@ -91,11 +91,6 @@ function hideMenuText() {
   $('label a').addClass('hover');
 }
 
-function recaptcha() {
-  $(window).open('http://www.google.com/recaptcha/mailhide/d?k\x3d01cHoL9GkCaCMplzfkm9g14Q\x3d\x3d\x26c\x3dBebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300');
-  return false;
-}
-
 //setup all the handlers
 function setup() {
   // setup the different page transitions
