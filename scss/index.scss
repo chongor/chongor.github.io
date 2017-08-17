@@ -100,8 +100,16 @@ body {
   font-size: 50px;
   color: #111;
   padding-right: 10px;
+  text-decoration: none;
+  &:visited {
+    color: #111;
+    text-decoration: none;
+  }
   &:hover {
     color: grey;
+    text-decoration: none;
+  }
+  &:active {
     text-decoration: none;
   }
 }
@@ -127,6 +135,10 @@ body {
   -o-transfrom: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   -webkit-transfrom-style: preserve-3d;
+}
+
+.email {
+  font-size: 24px;
 }
 
 .work {

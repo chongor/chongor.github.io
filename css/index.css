@@ -20,9 +20,15 @@ body {
 .social-icon {
   font-size: 50px;
   color: #111;
-  padding-right: 10px; }
+  padding-right: 10px;
+  text-decoration: none; }
+  .social-icon:visited {
+    color: #111;
+    text-decoration: none; }
   .social-icon:hover {
     color: grey;
+    text-decoration: none; }
+  .social-icon:active {
     text-decoration: none; }
 
 .menu {
@@ -45,6 +51,9 @@ body {
   -o-transfrom: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   -webkit-transfrom-style: preserve-3d; }
+
+.email {
+  font-size: 24px; }
 
 .work {
   top: 0;
