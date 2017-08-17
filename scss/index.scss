@@ -224,7 +224,6 @@ body {
     @include menu-font($font-stack, $menu-len, $menu-len-min);
     text-decoration: none;
     color: white;
-    opacity: 0;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -232,8 +231,16 @@ body {
   }
 }
 
-.hover:hover {
+.visible {
   opacity: 1;
+}
+
+.hover {
+  opacity: 0;
+
+  &:hover{
+    opacity: 1;
+  }
 }
 
 #up {

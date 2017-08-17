@@ -78,13 +78,19 @@ function cvOff() {
 function workButton() {
   var btn = $("#return-left");
 
-  $(window).on('scroll', function(e){
+  $(window).on('resize scroll', function(e){
     var top = $(window).height() * .45;
     var scrollTop = $(window).scrollTop();
     console.log(scrollTop);
 
     btn.css("top", scrollTop + top);
   });
+}
+
+function hideMenuText() {
+  console.log("Hello");
+  $('label a').removeClass('visible');
+  $('label a').addClass('hover');
 }
 
 //setup all the handlers
@@ -100,6 +106,7 @@ function setup() {
   hideContact();
   hideCv();
   hideWork();
+  setTimeout(hideMenuText, 5000);
 }
 
 $(document).ready(function(){

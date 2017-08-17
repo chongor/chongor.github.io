@@ -144,7 +144,6 @@ body {
     transform: rotate(-45deg);
     text-decoration: none;
     color: white;
-    opacity: 0;
     -o-transition: .5s;
     -ms-transition: .5s;
     -moz-transition: .5s;
@@ -170,8 +169,13 @@ body {
         font-size: 25px;
         line-height: 100px; } }
 
-.hover:hover {
+.visible {
   opacity: 1; }
+
+.hover {
+  opacity: 0; }
+  .hover:hover {
+    opacity: 1; }
 
 #up {
   right: 0;
