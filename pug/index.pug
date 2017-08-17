@@ -44,14 +44,17 @@ html
           div.col-md-3.col-xs-2
           div.col-md-6.col-xs-8
             h2 Contact Me
-            form(action="mailto:darren@darreny.com", method="post", enctype="text/plain")
-              div.form-group
-                input.form-control(type="text", name="name", placeholder="Your Name")
-              div.form-group
-                input.form-control(type="text", name="email", placeholder="Your Email")
-              div.form-group
-                textarea.form-control(rows="4", name="message", placeholder="Your Message", required)
-            button.btn.button Send
+            p Until I setup a server to forward emails, my email is hidden below.
+            p Thanks Google Mailhide!
+            a.email(href="http://www.google.com/recaptcha/mailhide/d?k=01cHoL9GkCaCMplzfkm9g14Q==&amp;c=BebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01cHoL9GkCaCMplzfkm9g14Q\x3d\x3d\x26c\x3dBebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;") My email.
+            //- form(action="mailto:darren@darreny.com", method="post", enctype="text/plain")
+            //-   div.form-group
+            //-     input.form-control(type="text", name="name", placeholder="Your Name")
+            //-   div.form-group
+            //-     input.form-control(type="text", name="email", placeholder="Your Email")
+            //-   div.form-group
+            //-     textarea.form-control(rows="4", name="message", placeholder="Your Message", required)
+            //- button.btn.button Send
           div.col-md-3.col-xs-2
       div.footer
         i.icon.icon-diamond-down-arrow#return-down
@@ -69,8 +72,8 @@ html
             div.col-sm-4.cv-me
               h2 Darren Yin
               p #[strong Software Engineer]
-              a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/")
-              a.social-icon.icon-github(href="https://github.com/chongor")
+              a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/", target='_blank')
+              a.social-icon.icon-github(href="https://github.com/chongor", target='_blank')
             div.col-sm-8
               h3 Nice ta meetcha!
               p I'm a California native who writes code and dabbles in digital design.
