@@ -81,6 +81,7 @@ function workButton() {
   $(window).on('resize scroll', function(e){
     var top = $(window).height() * .45;
     var scrollTop = $(window).scrollTop();
+    console.log(scrollTop);
 
     btn.css("top", scrollTop + top);
   });
