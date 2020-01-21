@@ -46,7 +46,10 @@ html
             h2 Contact Me
             p Until I setup a server to forward emails, my email is hidden below.
             p Thanks Google Mailhide!
-            a.email(href="http://www.google.com/recaptcha/mailhide/d?k=01cHoL9GkCaCMplzfkm9g14Q==&amp;c=BebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01cHoL9GkCaCMplzfkm9g14Q\x3d\x3d\x26c\x3dBebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;") My email.
+            a.email(
+              href="http://www.google.com/recaptcha/mailhide/d?k=01cHoL9GkCaCMplzfkm9g14Q==&amp;c=BebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8="
+              onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01cHoL9GkCaCMplzfkm9g14Q\x3d\x3d\x26c\x3dBebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"
+            ) My email.
           div.col-md-3.col-xs-2
       div.footer
         i.icon.icon-diamond-down-arrow#return-down
@@ -64,17 +67,19 @@ html
             div.col-sm-4.cv-me
               h2 Darren Yin
               p #[strong Software Engineer]
-              a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/", target='_blank')
-              a.social-icon.icon-github(href="https://github.com/chongor", target='_blank')
+              a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/", target="_blank" rel="noopener")
+              a.social-icon.icon-github(href="https://github.com/chongor", target="_blank" rel="noopener")
             div.col-sm-8
               h3 Nice ta meetcha!
-              p I'm a California native who writes code and dabbles in digital design.
+              p I'm a California native who writes code, dabbles in digital design, and plays video games.
               h3 Education
               p M.S.E. in Software Engineering - Carnegie Mellon University, 2017
               p B.S.E. in Computer Science - University of Pennsylvania, 2016
               p Minor in Fine Arts - University of Pennsylvania, 2016
               p Minor in Engineering Entrepreneurship - University of Pennsylvania, 2016
               h3 Work Experience
+              p #[strong 23andMe - Software Engineering, 2018 - Present]
+              p Full stack web application developer using Python, Django, MySQL, HTML5/CSS, and JavaScript. I 
               p #[strong Wayfair - Software Engineering Intern, 2015]
               p Converted PHP pages into MVC format and created an internal web tool to migrate internal tickets from their MySQL database onto JIRA Agile and back using JS and PHP.
               p #[strong TutorIT Web - Software Engineering Intern, 2014]
@@ -83,7 +88,7 @@ html
               p Developed on a social media Django web app, implementing an image uploading feature with Imgur's API and deployed it onto Amazon EC2 with a PostgreSQL database.
               div.row
                 div.col-sm-4
-                  h3 Skills
+                  h3 Languages
                   p Python
                   p Java 
                   p Javascript
@@ -97,9 +102,11 @@ html
                   p Redis
                 div.col-sm-4
                   h3 Frameworks
-                  p Node.js
                   p Django
+                  p Node.js
+                  p ReactJs
                   p Hadoop
+                  p Ruby on Rails
           div.col-xs-1
 
     div.work
@@ -120,10 +127,10 @@ html
               h4 Spring 2017
               h5 Made with Java, Python, MongoDB, and Hadoop.
               p#first Term Project for 18-645 How To Write Fast Code. A foray into creating a faster and scalable Reddit subreddit recommendation engine using distributed computing with Hadoop and Amazon Elastic MapReduce on Amazon Web Services. Code base can be found 
-                a(href="https://github.com/chongor/18645_team030_project", target='_blank') here
+                a(href="https://github.com/chongor/18645_team030_project", target="_blank" rel="noopener") here
                 | .
               p We preprocessed roughly 53 million raw Reddit comments from January 2015 (found 
-                a(href="https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/", target='_blank') here
+                a(href="https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment/", target="_blank" rel="noopener") here
                 | ). A user's preference for a particular subreddit was denoted by an affinity score, the number of comments made in the subreddit over the total number of comments posted in that subreddit.
               p The recommendation engine utilized the K Nearest Neighbor algorithm, a collaborative filtering technique, to find the best recommended subreddit based on users similar in preference.
               p After preprocessing, we trained the recommendation model using Hadoop on AWS EMR.  This involved two MapReduce jobs.  The first job calculated the partial distances between each user for each subreddit.  The second job took the output from the first and calculated the Euclidian distance between each user using the partial distances.
@@ -133,13 +140,13 @@ html
               h4 Fall 2016 - Spring 2017
               h5 Made in Java.
               p#first Created by a team of 3 for our Undergraduate Senior Design Project. We created a augmented reality navigation app on the Epson Moverio BT-200 smart glasses running on Android OS. Code base can be found 
-                a(href="https://github.com/hsieha/CIS400Project", target='_blank') here 
+                a(href="https://github.com/hsieha/CIS400Project", target="_blank" rel="noopener") here 
                 | and our poster 
-                a(href="https://www.dropbox.com/s/3n9pszbz49kgc6l/POWerNAV_Poster.pdf?dl=0", target='_blank') here
+                a(href="https://www.dropbox.com/s/3n9pszbz49kgc6l/POWerNAV_Poster.pdf?dl=0", target="_blank" rel="noopener") here
                 | .
               p Using OpenGL we created a digital model of the campus, mainly buildings and roads, with text labels overlaid.  A navigation subprogram calculates the shortest path along existing roads to a destination. Directions are provided onscreen through the use of a colored path with arrows directing the user.
               p A demo of a school tour was created to demonstrated the usage of POWerNAV. Video demo of the app in action: 
-                a(href="https://youtu.be/CuqLEfhLUw4", target='_blank') here
+                a(href="https://youtu.be/CuqLEfhLUw4", target="_blank" rel="noopener") here
                 | . We were one of the #[strong Runner-Ups] for the senior design projects from the Computer Science department.
               p Hardware limitations make it difficult to prevent the digital model world from desyncing with the real world causing a break in immersion in the AR experience. However, apps such as ours has shown its potential use in indoor environments to give tours, such as in museums, where targets could be placed at strategic positions to resync the digital world to the real.
             div.row.work-row(name="study-buddy")
@@ -147,7 +154,7 @@ html
               h4 Fall 2014
               h5 Made in HTML5, CSS, and Javascript.
               p#first Created by a team of 4 in 48 hours for PennApps Fall 2014, Upenn's semesterly Hackathon. A productivity chrome extension crossed with a simple pet simulator. Stay focused on work, or else! Code base can be found 
-                a(href="https://github.com/chongor/PennApps_Fall_2014", target='_blank') here
+                a(href="https://github.com/chongor/PennApps_Fall_2014", target="_blank" rel="noopener") here
                 | .
               p The user has a artifical cat pet in the app. Users can choose between different time management techniques and when the app is activated, non-productive sites (such as Facebook, Reddit, Twitter, etc.) are blocked for the duration.
               p The reason for the inclusion of the artificial pet is to give the user a reason to focus. Like normal productivity apps, if the user attempts to access these sites, they are blocked by the extension. In addition, the cat's health with worsen over multiple attempts, ending in death if the user does not focus on their work. The cat's health does improve over time if there are no attempts to access blocked sites.
