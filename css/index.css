@@ -1,41 +1,54 @@
 html {
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   height: 100%;
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .icon {
-  color: #111; }
-  @media screen and (min-width: 480px) {
-    .icon {
-      font-size: 75px; } }
-  @media screen and (max-width: 480px) {
-    .icon {
-      font-size: 45px; } }
-  .icon:hover {
-    color: grey; }
+  color: #111;
+}
+@media screen and (min-width: 480px) {
+  .icon {
+    font-size: 75px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .icon {
+    font-size: 45px;
+  }
+}
+.icon:hover {
+  color: grey;
+}
 
 .social-icon {
   font-size: 50px;
   color: #111;
   padding-right: 10px;
-  text-decoration: none; }
-  .social-icon:visited {
-    color: #111;
-    text-decoration: none; }
-  .social-icon:hover {
-    color: grey;
-    text-decoration: none; }
-  .social-icon:active {
-    text-decoration: none; }
+  text-decoration: none;
+}
+.social-icon:visited {
+  color: #111;
+  text-decoration: none;
+}
+.social-icon:hover {
+  color: grey;
+  text-decoration: none;
+}
+.social-icon:active {
+  text-decoration: none;
+}
 
 .menu {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  transition-duration: 500ms; }
+  transition-duration: 500ms;
+}
 
 .contact {
   position: absolute;
@@ -50,10 +63,12 @@ body {
   -ms-transform: translate3d(0, 100%, 0);
   -o-transfrom: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-  -webkit-transfrom-style: preserve-3d; }
+  -webkit-transfrom-style: preserve-3d;
+}
 
 .email {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 .work {
   top: 0;
@@ -67,29 +82,39 @@ body {
   -webkit-transfrom-style: preserve-3d;
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
-  animation-delay: 2s; }
-  .work .column {
-    height: 100vh; }
-  .work .work-row {
-    padding-top: 5%; }
-  .work h2 {
-    text-align: center;
-    padding-top: 10px; }
-  .work h3 {
-    display: inline; }
+  animation-delay: 2s;
+}
+.work .column {
+  height: 100vh;
+}
+.work .work-row {
+  padding-top: 5%;
+}
+.work h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+.work h3 {
+  display: inline;
+}
+.work h4 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 480px) {
   .work h4 {
-    margin-top: 5px;
-    margin-bottom: 0; }
-    @media screen and (min-width: 480px) {
-      .work h4 {
-        display: inline;
-        float: right; } }
+    display: inline;
+    float: right;
+  }
+}
 
 #first {
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 #last {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+}
 
 .cv {
   position: absolute;
@@ -108,17 +133,32 @@ body {
   -webkit-transfrom-style: preserve-3d;
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
-  animation-delay: 2s; }
-  .cv .cv-me {
-    text-align: center; }
+  animation-delay: 2s;
+}
+.cv .cv-me {
+  text-align: center;
+}
 
 .footer {
   position: fixed;
   bottom: 0;
   text-align: center;
   width: 100%;
-  background-color: white; }
+  background-color: white;
+}
 
+@media screen and (min-width: 480px) {
+  .toggle {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .toggle {
+    width: 100px;
+    height: 100px;
+  }
+}
 .toggle {
   margin: auto;
   display: block;
@@ -130,178 +170,231 @@ body {
   -o-transition: all 0.25s;
   transition: all 0.25s;
   transform: rotate(45deg);
-  transition-duration: 400ms; }
-  @media screen and (min-width: 480px) {
-    .toggle {
-      width: 150px;
-      height: 150px; } }
-  @media screen and (max-width: 480px) {
-    .toggle {
-      width: 100px;
-      height: 100px; } }
+}
+.toggle {
+  transition-duration: 400ms;
+}
+@media screen and (min-width: 480px) {
   .toggle a {
-    margin: auto;
-    display: block;
-    position: absolute;
-    font-family: Dosis, sans-serif;
-    font-weight: 200;
-    text-align: center;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    transform: rotate(-45deg);
-    text-decoration: none;
-    color: white;
-    -o-transition: .5s;
-    -ms-transition: .5s;
-    -moz-transition: .5s;
-    -webkit-transition: .5s; }
-    @media screen and (min-width: 480px) {
-      .toggle a {
-        width: 100px;
-        height: 100px; } }
-    @media screen and (max-width: 480px) {
-      .toggle a {
-        width: 100px;
-        height: 100px; } }
-    @media screen and (min-width: 480px) {
-      .toggle a {
-        width: 150px;
-        height: 150px;
-        font-size: 35px;
-        line-height: 150px; } }
-    @media screen and (max-width: 480px) {
-      .toggle a {
-        width: 100px;
-        height: 100px;
-        font-size: 25px;
-        line-height: 100px; } }
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .toggle a {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .toggle a {
+    width: 150px;
+    height: 150px;
+    font-size: 35px;
+    line-height: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .toggle a {
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    line-height: 100px;
+  }
+}
+.toggle a {
+  margin: auto;
+  display: block;
+  position: absolute;
+  font-family: Dosis, sans-serif;
+  font-weight: 200;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transform: rotate(-45deg);
+}
+.toggle a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
 
 .visible {
-  opacity: 1; }
+  opacity: 1;
+}
 
 .hover {
-  opacity: 0; }
-  .hover:hover {
-    opacity: 1; }
+  opacity: 0;
+}
+.hover:hover {
+  opacity: 1;
+}
 
+@media screen and (min-width: 480px) {
+  #up {
+    top: -230px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #up {
+    top: -160px;
+  }
+}
 #up {
   right: 0;
   bottom: 0;
-  left: 0; }
-  @media screen and (min-width: 480px) {
-    #up {
-      top: -230px; } }
-  @media screen and (max-width: 480px) {
-    #up {
-      top: -160px; } }
+  left: 0;
+}
 
+@media screen and (min-width: 480px) {
+  #right {
+    right: -230px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #right {
+    right: -160px;
+  }
+}
 #right {
   top: 0;
   bottom: 0;
-  left: 0; }
-  @media screen and (min-width: 480px) {
-    #right {
-      right: -230px; } }
-  @media screen and (max-width: 480px) {
-    #right {
-      right: -160px; } }
+  left: 0;
+}
 
+@media screen and (min-width: 480px) {
+  #down {
+    bottom: -230px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #down {
+    bottom: -160px;
+  }
+}
 #down {
   top: 0;
   right: 0;
-  left: 0; }
-  @media screen and (min-width: 480px) {
-    #down {
-      bottom: -230px; } }
-  @media screen and (max-width: 480px) {
-    #down {
-      bottom: -160px; } }
+  left: 0;
+}
 
+@media screen and (min-width: 480px) {
+  #left {
+    left: -230px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #left {
+    left: -160px;
+  }
+}
 #left {
   top: 0;
   right: 0;
-  bottom: 0; }
-  @media screen and (min-width: 480px) {
-    #left {
-      left: -230px; } }
-  @media screen and (max-width: 480px) {
-    #left {
-      left: -160px; } }
+  bottom: 0;
+}
 
 @media screen and (min-width: 480px) {
   #left-text {
-    font-size: 150px; } }
+    font-size: 150px;
+  }
+}
 @media screen and (max-width: 480px) {
   #left-text {
-    font-size: 100px; } }
+    font-size: 100px;
+  }
+}
 
 .email {
-  height: 25vh; }
+  height: 25vh;
+}
 
+@media screen and (min-width: 480px) {
+  .envelope-top {
+    margin-left: -80px;
+    border-top: 45px solid black;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 80px solid transparent;
+  }
+}
+@media screen and (max-width: 480px) {
+  .envelope-top {
+    margin-left: -60px;
+    border-top: 30px solid black;
+    border-right: 60px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 60px solid transparent;
+  }
+}
 .envelope-top {
   position: absolute;
   top: 20%;
-  left: 50%; }
-  @media screen and (min-width: 480px) {
-    .envelope-top {
-      margin-left: -80px;
-      border-top: 45px solid black;
-      border-right: 80px solid transparent;
-      border-bottom: 50px solid transparent;
-      border-left: 80px solid transparent; } }
-  @media screen and (max-width: 480px) {
-    .envelope-top {
-      margin-left: -60px;
-      border-top: 30px solid black;
-      border-right: 60px solid transparent;
-      border-bottom: 35px solid transparent;
-      border-left: 60px solid transparent; } }
+  left: 50%;
+}
 
+@media screen and (min-width: 480px) {
+  .envelope-bottom {
+    margin-left: -85px;
+    border-top: 50px solid transparent;
+    border-right: 85px solid black;
+    border-bottom: 50px solid black;
+    border-left: 85px solid black;
+  }
+}
+@media screen and (max-width: 480px) {
+  .envelope-bottom {
+    margin-left: -65px;
+    border-top: 35px solid transparent;
+    border-right: 65px solid black;
+    border-bottom: 35px solid black;
+    border-left: 65px solid black;
+  }
+}
 .envelope-bottom {
   position: absolute;
   top: 20%;
-  left: 50%; }
-  @media screen and (min-width: 480px) {
-    .envelope-bottom {
-      margin-left: -85px;
-      border-top: 50px solid transparent;
-      border-right: 85px solid black;
-      border-bottom: 50px solid black;
-      border-left: 85px solid black; } }
-  @media screen and (max-width: 480px) {
-    .envelope-bottom {
-      margin-left: -65px;
-      border-top: 35px solid transparent;
-      border-right: 65px solid black;
-      border-bottom: 35px solid black;
-      border-left: 65px solid black; } }
+  left: 50%;
+}
 
 #return-down {
-  text-align: center; }
+  text-align: center;
+}
 
 #return-left {
   position: fixed;
-  top: 45vh; }
-  @media screen and (max-width: 480px) {
-    #return-left {
-      left: 2px; } }
+  top: 45vh;
+}
+@media screen and (max-width: 480px) {
+  #return-left {
+    left: 2px;
+  }
+}
 
 #return-up {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 10vh; }
+  height: 10vh;
+}
 
 .button {
   background: white;
-  border: 2px solid black; }
-  .button:hover {
-    color: grey;
-    border: 2px solid grey; }
+  border: 2px solid black;
+}
+.button:hover {
+  color: grey;
+  border: 2px solid grey;
+}
 
 textarea {
-  resize: none; }
+  resize: none;
+}
 
 /*# sourceMappingURL=index.css.map */

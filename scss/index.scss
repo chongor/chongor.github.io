@@ -26,16 +26,18 @@ $desktop: "(min-width: 480px)";
 
 @mixin diamond($len, $min-len) {
   @include square($len, $min-len);
-  margin: auto;
-  display: block;
-  position: fixed;
-  background: #111;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-  transform: rotate(45deg);
+  & {
+    margin: auto;
+    display: block;
+    position: fixed;
+    background: #111;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    transform: rotate(45deg);
+  }
 }
 
 @mixin backToSquare() {
@@ -59,17 +61,20 @@ $desktop: "(min-width: 480px)";
     font-size: $font-size-min;
     line-height: $len-min;
   }
-  margin: auto;
-  display: block;
-  position: absolute;
-  font-family: $font;
-  font-weight: $font-weight;
-  text-align: center;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  transform: rotate(-45deg);
+
+  & {
+    margin: auto;
+    display: block;
+    position: absolute;
+    font-family: $font;
+    font-weight: $font-weight;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transform: rotate(-45deg);
+  }
 }
 
 html {
@@ -83,24 +88,27 @@ body {
 }
 
 .icon {
+  & {
+    color: #111;
+  }
   @media screen and #{$desktop} {
     font-size: 75px;
   }
-
   @media screen and #{$phone} {
     font-size: 45px;
   }
-  color: #111;
   &:hover {
     color: grey;
   }
 }
 
 .social-icon {
-  font-size: 50px;
-  color: #111;
-  padding-right: 10px;
-  text-decoration: none;
+  & {
+    font-size: 50px;
+    color: #111;
+    padding-right: 10px;
+    text-decoration: none;
+  }
   &:visited {
     color: #111;
     text-decoration: none;
@@ -210,9 +218,9 @@ body {
   -moz-animation-delay: 2s;
   animation-delay: 2s;
 
-  .col-sm-8 p {
-    //padding-left: 10px;
-  }
+  // .col-sm-8 p {
+  //   padding-left: 10px;
+  // }
 
   .cv-me {
     text-align: center;
@@ -229,17 +237,23 @@ body {
 
 .toggle {
   @include diamond($menu-len, $menu-len-min);
-  transition-duration: 400ms;
+  & {
+    transition-duration: 400ms;
+  }
+
 
   a {
     @include square($menu-len-min, $menu-len-min);
     @include menu-font($font-stack, $menu-len, $menu-len-min);
-    text-decoration: none;
-    color: white;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+    & {
+      text-decoration: none;
+      color: white;
+      transition: 0.5s;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+    }
   }
 }
 
@@ -264,10 +278,13 @@ body {
     top: -$pos-min;
   }
 
-  right: 0;
-  bottom: 0;
-  left: 0;
+  & {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
+
 
 #right {
   @media screen and #{$desktop} {
@@ -277,9 +294,11 @@ body {
   @media screen and #{$phone} {
     right: -$pos-min;
   }
-  top: 0;
-  bottom: 0;
-  left: 0;
+  & {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 #down {
@@ -290,9 +309,11 @@ body {
   @media screen and #{$phone} {
     bottom: -$pos-min;
   }
-  top: 0;
-  right: 0;
-  left: 0;
+  & {
+    top: 0;
+    right: 0;
+    left: 0;  
+  }
 }
 
 #left {
@@ -303,9 +324,11 @@ body {
   @media screen and #{$phone} {
     left: -$pos-min;
   }
-  top: 0;
-  right: 0;
-  bottom: 0;
+  & {
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 #left-text {
@@ -338,10 +361,11 @@ body {
     border-bottom: 35px solid transparent;
     border-left: 60px solid transparent;
   }
-  position: absolute;
-  top: 20%;
-  left: 50%;
-
+  & {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
 }
 
 .envelope-bottom {
@@ -360,9 +384,11 @@ body {
     border-bottom: 35px solid black;
     border-left: 65px solid black;
   }
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  & {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
 }
 
 #return-down {
@@ -370,8 +396,10 @@ body {
 }
 
 #return-left {
-  position: fixed;
-  top: 45vh;
+  & {
+    position: fixed;
+    top: 45vh;
+  }
   @media screen and #{$phone} {
     left: 2px;
   }

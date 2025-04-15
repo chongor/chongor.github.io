@@ -1,0 +1,13 @@
+{
+    "name": "chongor.github.io",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "watch": "npx sass --watch scss:css & pug3 --watch pug --out ."
+    },
+    "devDependencies": {
+        "@tokilabs/pug3-cli": "^3.0.1",
+        "pug": "^3.0.3",
+        "sass": "^1.86.3"
+    }
+}
