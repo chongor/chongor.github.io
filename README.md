@@ -1,5 +1,5 @@
 # Personal Site
-Personal Site created back in 2017.
+Personal Site created back in 2017 and can be found at www.darreny.com.
 
 Using ~~jade~~ pug and sass because I'm lazy.
 
