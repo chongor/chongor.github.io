@@ -104,7 +104,7 @@ function setup() {
   hideContact();
   hideCv();
   hideWork();
-  setTimeout(hideMenuText, 5000);
+  setTimeout(hideMenuText, 2000);
 }
 
 $(document).ready(function(){
@@ -112,5 +112,5 @@ $(document).ready(function(){
   setup();
   $("body").show();
   //have logo fade in
-  $("#left-text").fadeTo(1000, 1);
+  $("#left-text").fadeTo(2000, 1);
 })

@@ -1,7 +1,10 @@
-# OS Generated files #
+# MacOS Generated files #
 .DS_Store
 Thumbs.db
 
 # SCSS generated #
 .sass-cache
 .sass-cache/*
+
+# don't push node modules
+node_modules
