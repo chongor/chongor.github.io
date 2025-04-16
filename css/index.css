@@ -134,6 +134,10 @@ body {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   animation-delay: 2s;
+  margin-bottom: 50px;
+}
+.cv .cv-row {
+  padding-bottom: 75px;
 }
 .cv .cv-me {
   text-align: center;
@@ -300,6 +304,12 @@ body {
   bottom: 0;
 }
 
+#copyright {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+}
+
 @media screen and (min-width: 480px) {
   #left-text {
     font-size: 150px;
@@ -309,6 +319,9 @@ body {
   #left-text {
     font-size: 100px;
   }
+}
+#left-text {
+  opacity: 0;
 }
 
 .email {

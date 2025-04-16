@@ -217,10 +217,11 @@ body {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   animation-delay: 2s;
+  margin-bottom: 50px;
 
-  // .col-sm-8 p {
-  //   padding-left: 10px;
-  // }
+  .cv-row {
+    padding-bottom: 75px;
+  }
 
   .cv-me {
     text-align: center;
@@ -331,6 +332,12 @@ body {
   }
 }
 
+#copyright {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+}
+
 #left-text {
   @media screen and #{$desktop} {
     font-size: 150px;
@@ -338,6 +345,9 @@ body {
 
   @media screen and #{$phone} {
     font-size: 100px;
+  }
+  & {
+    opacity: 0;
   }
 }
 

@@ -18,6 +18,7 @@ html
     
     script(src="js/index.js")
 
+    link(rel="icon" type="image/svg+xml" sizes="any" href="images/dy.svg")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dosis")
     link(rel="stylesheet", href="css/bootstrap.min.css")
     link(rel="stylesheet", href="css/index.css")
@@ -33,6 +34,8 @@ html
         a.visible#down-text CV
       label.toggle#left
         a.icon-dy#left-text
+      label#copyright
+        p &copy; 2025
     
     div.contact
       div.container
@@ -45,10 +48,10 @@ html
           div.col-md-6.col-xs-8
             h2 Contact Me
             p Until I setup a server to forward emails, my email is hidden below.
-            p Thanks Google Mailhide!
+            p Thanks Mailhide.io!
             a.email(
-              href="http://www.google.com/recaptcha/mailhide/d?k=01cHoL9GkCaCMplzfkm9g14Q==&amp;c=BebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8="
-              onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01cHoL9GkCaCMplzfkm9g14Q\x3d\x3d\x26c\x3dBebrzwGH_C2iaRuvqVpus2h5b4Wy2koR0qgxuzpuzt8\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"
+              href="https://mailhide.io/e/Kr7nSgDv"
+              onclick="popup=window.open('https://mailhide.io/e/Kr7nSgDv','mailhidepopup','width=580,height=635'); return false;"
             ) My email.
           div.col-md-3.col-xs-2
       div.footer
@@ -61,34 +64,43 @@ html
           div.col-xs-10#return-up
             i.icon.icon-diamond-up-arrow
           div.col-xs-1
-        div.row
+        div.row.cv-row
           div.col-xs-1
           div.col-xs-10
             div.col-sm-4.cv-me
-              h2 Darren Yin
-              p #[strong Software Engineer]
+              h1 Darren Yin
+              p #[strong Senior Software Engineer]
               a.social-icon.icon-linkedin(href="https://www.linkedin.com/in/darrenyin/", target="_blank" rel="noopener")
               a.social-icon.icon-github(href="https://github.com/chongor", target="_blank" rel="noopener")
             div.col-sm-8
-              h3 Nice ta meetcha!
+              h2 Nice ta meetcha!
               p I'm a California native who writes code, dabbles in digital design, and plays video games.
-              h3 Education
+              h2 Education
               p M.S.E. in Software Engineering - Carnegie Mellon University, 2017
               p B.S.E. in Computer Science - University of Pennsylvania, 2016
               p Minor in Fine Arts - University of Pennsylvania, 2016
               p Minor in Engineering Entrepreneurship - University of Pennsylvania, 2016
-              h3 Work Experience
-              p #[strong 23andMe - Software Engineering, 2018 - Present]
-              p Full stack web application developer using Python, Django, MySQL, HTML5/CSS, and JavaScript. I 
-              p #[strong Wayfair - Software Engineering Intern, 2015]
+              h2 Work Experience
+              h3 #[strong 23andMe]
+              h4 #[strong Senior Software Engineer I, 2022 - 2024]
+              p Main architect of new health report generation microservice and workflows.
+              p Lead backend engineer on multiple Health sevices that served web and mobile clients.
+              p Left company to pursue personal development and projects, but returned for 2 months as a contractor to complete additional Family Tree ancestry work.
+              h4 #[strong Software Engineer I & II, 2018 - 2022]
+              p Full stack web application developer using Python, Django, MySQL, HTML5/CSS, and JavaScript.
+              p One of three architects that brought consumer applications into GDPR compliance.
+              h3 #[strong Wayfair]
+              h4 #[strong Software Engineering Intern, 2015]
               p Converted PHP pages into MVC format and created an internal web tool to migrate internal tickets from their MySQL database onto JIRA Agile and back using JS and PHP.
-              p #[strong TutorIT Web - Software Engineering Intern, 2014]
+              h3 #[strong TutorIT Web]
+              h4 #[strong Software Engineering Intern, 2014]
               p Worked remotely with international team and non-technical founder, an emeritus professor, to develop and test the company's web education software using proprietary High Definition Language.
-              p #[strong Hearhere - Web Developer, 2013-2014]
+              h3 #[strong Hearhere]
+              h4 #[strong Web Developer, 2013-2014]
               p Developed on a social media Django web app, implementing an image uploading feature with Imgur's API and deployed it onto Amazon EC2 with a PostgreSQL database.
               div.row
                 div.col-sm-4
-                  h3 Languages
+                  h2 Languages
                   p Python
                   p Java 
                   p Javascript
@@ -96,12 +108,12 @@ html
                   p PHP
                   p HTML5/CSS
                 div.col-sm-4
-                  h3 Databases
+                  h2 Databases
                   p MySQL
                   p MongoDB
                   p Redis
                 div.col-sm-4
-                  h3 Frameworks
+                  h2 Frameworks
                   p Django
                   p Node.js
                   p ReactJs
@@ -119,7 +131,7 @@ html
             div.row.work-row(name="personal-site")
               h3 #[strong This Site]
               h4 Spring 2017
-              h5 Made with HTML5, CSS, and Javascript.
+              h5 Made with HTML5, CSS, and Javascript. Updated in 2025.
               p#first A personal site project I began in senior year of undergrad, continuously being improved. Built using Pug (a templating engine formerly known as Jade), Sass (a stylesheet language), and Bootstrap 3.
               p The goal was to create a minimal, one page website with css animations. The main concept was from a main menu like system that would slide the relevant pages into the view port when navigated to.
             div.row.work-row(name="recommendor")
