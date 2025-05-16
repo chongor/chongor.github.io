@@ -94,12 +94,13 @@ function hideMenuText() {
 //setup all the handlers
 function setup() {
   // setup the different page transitions
-  $("#up").click(contactOn);
-  $("#return-down").click(contactOff);
+  $("#up").click(cvOn);
+  $('#return-down').children().click(cvOff);
   $("#right").click(workOn);
   $('#return-left').click(workOff);
-  $("#down").click(cvOn);
-  $('#return-up').children().click(cvOff);
+  $("#down").click(contactOn);
+  $("#return-up").click(contactOff);
+
   //hide up and down
   hideContact();
   hideCv();

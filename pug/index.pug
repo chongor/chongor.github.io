@@ -27,11 +27,11 @@ html
   body
     div.menu
       label.toggle#up
-        a.visible#up-text Contact
+        a.visible#up-text CV
       label.toggle#right
         a.visible#right-text Work
       label.toggle#down
-        a.visible#down-text CV
+        a.visible#down-text Contact
       label.toggle#left
         a.icon-dy#left-text
       label#copyright
@@ -39,6 +39,10 @@ html
     
     div.contact
       div.container
+        div.row
+          div.col-xs-1
+          div.col-xs-10#return-up
+            i.icon.icon-diamond-up-arrow
         div.row
           div.col-md-12.email
             label.envelope-top
@@ -54,16 +58,9 @@ html
               onclick="popup=window.open('https://mailhide.io/e/Kr7nSgDv','mailhidepopup','width=580,height=635'); return false;"
             ) My email.
           div.col-md-3.col-xs-2
-      div.footer
-        i.icon.icon-diamond-down-arrow#return-down
 
     div.cv
       div.container-fluid
-        div.row
-          div.col-xs-1
-          div.col-xs-10#return-up
-            i.icon.icon-diamond-up-arrow
-          div.col-xs-1
         div.row.cv-row
           div.col-xs-1
           div.col-xs-10
@@ -120,6 +117,12 @@ html
                   p Hadoop
                   p Ruby on Rails
           div.col-xs-1
+        div.row
+          div.col-xs-1
+          div.col-xs-10#return-down
+            i.icon.icon-diamond-down-arrow
+          div.col-xs-1
+        
 
     div.work
       div.container-fluid
