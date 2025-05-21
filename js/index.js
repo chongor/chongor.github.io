@@ -24,6 +24,7 @@ function showCv() {
 }
 
 function contactOn() {
+  umami.track('View Contact');
   hideContact();
   hideWork();
   setTimeout(function(){
@@ -40,6 +41,7 @@ function contactOff() {
 }
 
 function workOn() {
+  umami.track('View Work');
   hideContact();
   hideCv();
   setTimeout(function() {
@@ -59,6 +61,7 @@ function workOff() {
 }
 
 function cvOn() {
+  umami.track('View CV');
   hideContact();
   hideWork();
   setTimeout(function() {
